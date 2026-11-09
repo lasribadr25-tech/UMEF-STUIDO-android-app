@@ -1,0 +1,31 @@
+name: uemf_studio_figma
+description: "Euromed Studios — application Flutter réalisée d'après le fichier Figma MPCFrOf9lWTGoVmska985o et les spécifications GitHub UEMF-Studio (Phase 1). Interface en français, données locales de démonstration."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.13.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  # Conservé uniquement pour la migration unique des anciennes données
+  # SharedPreferences (voir lib/store.dart) ; la persistance courante est SQLite.
+  shared_preferences: ^2.3.2
+  sqflite: ^2.4.0
+  path: ^1.9.0
+  path_provider: ^2.1.0
+  qr_flutter: ^4.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  # Implémentation SQLite desktop pour les tests (flutter test, Linux).
+  # Non utilisée par l'application Android, qui utilise sqflite.
+  sqflite_common_ffi: ^2.3.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
